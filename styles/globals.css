@@ -22,7 +22,6 @@ a {
 
 img {
   width: 100%;
-  border-radius: 10px;
 }
 
 header {
@@ -78,9 +77,32 @@ header a {
 }
 
 .card {
-  padding: 15px;
-  border-radius: 10px;
+  border-radius: 0.25rem!important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  position: relative;
+  width: 384px;
+  height: 233px;
+}
+
+.card-body {
+  padding-top: 1rem;
+	padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #4a5568;
 }
 
 .card-page {
@@ -93,8 +115,10 @@ header a {
 
 .post-date {
   background: #f4f4f4;
-  margin-bottom: 20px;
-  padding: 3px 10px;
+  
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 .post-body ul,
