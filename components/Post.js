@@ -18,9 +18,7 @@ export default function Posts({ post }) {
 
       <div className='post-date'>Posted on {post.frontmatter.date}</div>
       <Link href={`/blog/${post.slug}`}>
-        <a href='' className='btn'>
-          test
-        </a>
+        <a className='btn'>Read More</a>
       </Link>
     </div>
   );

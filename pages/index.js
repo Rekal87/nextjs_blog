@@ -11,7 +11,6 @@ export default function HomePage({ posts }) {
       <Head>
         <title>Nextjs Markdown Blog</title>
       </Head>
-      <h1>Test</h1>
       <div className='posts'>
         {posts.map((post, index) => (
           <Post key={index} post={post} />
