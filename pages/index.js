@@ -2,6 +2,7 @@ import Head from 'next/head';
 import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
+import Post from '../components/Post';
 
 export default function HomePage({ posts }) {
   console.log(posts);
@@ -12,9 +13,9 @@ export default function HomePage({ posts }) {
       </Head>
       <h1>Test</h1>
       <div className='posts'>
-        {posts.map((post) => {
-          <h1>{post.frontmatter.title}</h1>;
-        })}
+        {posts.map((post, index) => (
+          <Post key={index} post={post} />
+        ))}
       </div>
     </div>
   );
