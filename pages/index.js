@@ -3,16 +3,19 @@ import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
 
-export default function HomePage(props) {
-  const { posts } = props;
-
+export default function HomePage({ posts }) {
+  console.log(posts);
   return (
     <div>
       <Head>
         <title>Nextjs Markdown Blog</title>
       </Head>
-
-      <h1>Hello World</h1>
+      <h1>Test</h1>
+      <div className='posts'>
+        {posts.map((post) => {
+          <h1>{post.frontmatter.title}</h1>;
+        })}
+      </div>
     </div>
   );
 }
@@ -41,11 +44,9 @@ export async function getStaticProps() {
     };
   });
 
-  console.log(posts);
-
   return {
     props: {
-      posts: 'The Posts',
+      posts: posts,
     },
   };
 }
