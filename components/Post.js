@@ -11,12 +11,13 @@ export default function Posts({ post }) {
           layout='fill'
         />
       </div>
+      <div className='post-date'>Posted on {post.frontmatter.date}</div>
+
       <div className='card-body'>
         <div className='card-title'>{post.frontmatter.title}</div>
         <div className='card-text'>{post.frontmatter.excerpt}</div>
       </div>
 
-      <div className='post-date'>Posted on {post.frontmatter.date}</div>
       <Link href={`/blog/${post.slug}`}>
         <a className='btn'>Read More</a>
       </Link>
