@@ -3,6 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Post from '../components/Post';
+import { sortByDate } from '../utils';
 
 export default function HomePage({ posts }) {
   console.log(posts);
@@ -46,7 +47,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts: posts,
+      posts: posts.sort(sortByDate),
     },
   };
 }

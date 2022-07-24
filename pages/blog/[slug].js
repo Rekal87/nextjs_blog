@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-
+import { marked } from 'marked';
 import Link from 'next/link';
 
 export default function PostPage({
@@ -17,6 +17,13 @@ export default function PostPage({
 
       <div className='card card-page'>
         <h1 className='post-title'>{title}</h1>
+        <picture>
+          <img src={cover_image} alt={cover_image} />
+        </picture>
+        <div className='post-date'>Posted on {date}</div>
+        <div className='post-body'>
+          <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+        </div>
       </div>
     </>
   );
